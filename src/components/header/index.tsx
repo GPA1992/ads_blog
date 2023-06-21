@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import styles from './styles.module.scss';
+import './header.styles.sass';
 
 export default function HeaderComponent() {
     return (
-        <div>
+        <div className='header'>
             <p>Header Component</p>
         </div>
     );
