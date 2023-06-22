@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import styles from './styles.module.scss';
+import './footer.styles.sass';
 
 
 export default function FooterComponent() {
     return (
-        <div>
+        <footer>
             <p>Footer</p>
-        </div>
+        </footer>
     );
 }
