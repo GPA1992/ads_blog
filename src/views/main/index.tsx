@@ -6,10 +6,16 @@ import FooterComponent from '../../components/footer';
 
 function Main() {
     return (
-        <div className='container'>
-            <HeaderComponent />
-            <MainArticleComponent />
-            <FooterComponent />
+        <div className="app-container">
+            <header className="header">
+                <HeaderComponent />
+            </header>
+            <main className="main">
+                <MainArticleComponent />
+            </main>
+            <footer className="footer">
+                <FooterComponent />
+            </footer>
         </div>
     );
 }
