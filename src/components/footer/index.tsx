@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import styles from './styles.module.scss';
+import './footer.styles.sass';
+import { Typography } from '@mui/material';
 
 
 export default function FooterComponent() {
     return (
-        <div>
-            <p>Footer</p>
-        </div>
+        <footer>
+            <Typography sx={{ color: 'white', width: '100%', fontFamily: 'tenerifes', textAlign: 'center', fontSize: '26px' }} >
+                Teneriffe
+            </Typography>
+        </footer>
     );
 }
