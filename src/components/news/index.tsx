@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Card, CardActionArea, CardContent, CardMedia, Link, Typography } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import news from '../../assets/images/noticia.png'
 
 
 
@@ -18,7 +19,7 @@ export default function News() {
                     <CardMedia
                         component="img"
                         height="540"
-                        image="src/assets/images/noticia.png"
+                        image={news}
                         alt="green iguana"
                     />
                     <CardContent>

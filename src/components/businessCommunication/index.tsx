@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './ourStory.styles.sass';
 import { Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Link, Typography } from '@mui/material';
+import infografico from '../../assets/images/infografico.png'
 
 
 export default function BusinessCommunication() {
@@ -25,7 +26,7 @@ export default function BusinessCommunication() {
                     <CardMedia
                         component="img"
                         height="340"
-                        image="src/assets/images/infografico.png"
+                        image={infografico}
                         alt="green iguana"
                     />
                     <CardContent>
