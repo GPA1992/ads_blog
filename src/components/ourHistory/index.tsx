@@ -5,7 +5,15 @@ import { Box, Typography } from '@mui/material';
 
 export default function OurStory() {
     return (
-        <Box sx={{ maxWidth: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', backgroundColor: '#3c3f3d', padding: '30px', borderRadius: '10px' }} >
+        <Box sx={{
+            width: {
+                xs: '90vw',
+                sm: '90vw',
+                md: '90vw',
+                lg: '90vw',
+                xl: '50vw'
+            }, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', backgroundColor: '#3c3f3d', padding: '30px', borderRadius: '10px'
+        }} >
             <Typography variant="h4" gutterBottom sx={{ color: '#dd9937', margin: '30px', width: '100%', fontFamily: 'alvaro' }} >
                 Nossa História
             </Typography>

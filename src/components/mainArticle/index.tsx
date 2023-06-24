@@ -30,42 +30,99 @@ export default function MainArticleComponent() {
     }
 
     return (
-        <Box sx={{ width: '100%', }} >
+        <Box sx={{
+            width: {
+                xs: '90vw',
+                sm: '90vw',
+                md: '90vw',
+                lg: '90vw',
+                xl: '100vw'
+            },
+        }} >
             <ThemeProvider theme={theme}>
                 <TabContext value={value}>
                     <Box sx={{
-                        display: 'flex', justifyContent: 'center', alignItems: 'flex-end',
-                        width: '100%', fontSize: '20px', height: '200px'
+                        display: 'flex', flexDirection: {
+                            xs: 'column',
+                            sm: 'column',
+                            md: 'row',
+                            lg: 'row',
+                            xl: 'row'
+                        }, justifyContent: 'center', alignItems: {
+                            xs: 'center',
+                            sm: 'center',
+                            md: 'flex-end',
+                            lg: 'flex-end',
+                            xl: 'flex-end'
+                        },
+                        width: '100%', fontSize: '20px', height: {
+                            xs: '',
+                            sm: '',
+                            md: '200px',
+                            lg: '200px',
+                            xl: '200px'
+                        },
                     }} >
                         <Avatar
                             src={logo}
                             sx={{
-                                width: '200px',
-                                height: '200px',
+                                width: {
+                                    xs: '80px',
+                                    sm: '80px',
+                                    md: '200px',
+                                    lg: '200px',
+                                    xl: '200px'
+                                },
+                                height: {
+                                    xs: '80px',
+                                    sm: '80px',
+                                    md: '200px',
+                                    lg: '200px',
+                                    xl: '200px'
+                                },
                                 borderBottom: '5px #DD9937 solid', paddingBottom: '10px'
 
                             }}
                         />
-                        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                            <Typography sx={{ color: '#dd9937', width: '100%', fontFamily: 'tenerifes', fontSize: '85px' }} >
+                        <Box sx={{
+                            display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: {
+                                xs: '100%',
+                                sm: '100%',
+                                md: '70vw',
+                                lg: '50vw',
+                                xl: '40vw'
+                            },
+                        }}>
+                            <Typography sx={{
+                                color: '#dd9937', width: '100%', fontFamily: 'tenerifes', fontSize: '85px', textAlign: {
+                                    xs: 'center',
+                                    sm: 'center',
+                                    md: 'left',
+                                    lg: 'left',
+                                    xl: 'left'
+
+                                }
+                            }} >
                                 Teneriffe
                             </Typography>
-                            <TabList
+                            <Tabs
                                 onChange={handleChange}
                                 aria-label='Tabs example'
-                                TabIndicatorProps={{
-                                    style: {
-                                        backgroundColor: 'white',
-                                    }
-                                }}
+                                variant="scrollable"
                                 indicatorColor='primary'
                                 sx={{
                                     height: '50px',
                                     backgroundColor: '#DD9937',
                                     border: '1px solid #DD9937',
-                                    borderRadius: '10px'
+                                    borderRadius: '10px',
+                                    width: {
+                                        xs: '100%',
+                                        sm: '100%',
+                                        md: '100%',
+                                        lg: '100%',
+                                        xl: '100%'
+                                    },
                                 }}
-                                centered
                             >
 
                                 <Tab id='tab' label="Nossa História" value='1' sx={{ fontSize: '26px', fontWeight: '400', color: 'black', fontFamily: 'alvaro' }} />
@@ -73,7 +130,7 @@ export default function MainArticleComponent() {
                                 <Tab id='tab' label="A comunicação empresarial" value='3' sx={{ fontSize: '26px', fontWeight: '400', color: 'black', fontFamily: 'alvaro' }} />
                                 <Tab id='tab' label="Fale Conosco" value='4' sx={{ fontSize: '26px', fontWeight: '400', color: 'black', fontFamily: 'alvaro' }} />
                                 <Tab id='tab' label="Notícia" value='5' sx={{ fontSize: '26px', fontWeight: '400', color: 'black', fontFamily: 'alvaro' }} />
-                            </TabList>
+                            </Tabs>
                         </Box>
                     </Box>
                     <TabPanel value={value} id="tab-panel" sx={{ display: 'flex', justifyContent: 'center' }}>

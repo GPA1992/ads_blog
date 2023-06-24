@@ -35,7 +35,15 @@ export default function Portfolio() {
 
 
     return (
-        <Box sx={{ width: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', backgroundColor: '#3c3f3d', padding: '30px', borderRadius: '10px', margin: '20px' }} >
+        <Box sx={{
+            width: {
+                xs: '70vw',
+                sm: '70vw',
+                md: '70vw',
+                lg: '60vw',
+                xl: '50vw'
+            }, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', backgroundColor: '#3c3f3d', padding: '30px', borderRadius: '10px', margin: '20px'
+        }} >
             <Typography variant="h4" gutterBottom sx={{ color: '#dd9937', margin: '30px', width: '100%', fontFamily: 'alvaro' }} >
                 Portfólio
             </Typography>
