@@ -5,8 +5,8 @@ import { Box, Typography } from '@mui/material';
 
 export default function OurStory() {
     return (
-        <Box sx={{ width: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
-            <Typography variant="h4" gutterBottom sx={{ color: '#d79a49', margin: '30px', fontWeight: '600', textDecoration: 'underline' }} >
+        <Box sx={{ maxWidth: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', backgroundColor: '#3c3f3d', padding: '30px', borderRadius: '10px' }} >
+            <Typography variant="h4" gutterBottom sx={{ color: '#dd9937', margin: '30px', width: '100%', fontFamily: 'alvaro' }} >
                 Nossa História
             </Typography>
             <Typography variant="body1" gutterBottom sx={{ textAlign: 'justify', color: 'white' }} >

@@ -25,7 +25,7 @@ function a11yProps(index: any) {
 
 export default function Portfolio() {
 
-    const [value, setValue] = useState('1')
+    const [value, setValue] = useState<any>()
     const [lanche, setLanche] = useState<Lanche>(allImages[0])
 
     const handleChange = (event: React.SyntheticEvent, lanche: Lanche) => {
@@ -35,96 +35,89 @@ export default function Portfolio() {
 
 
     return (
-        <Box sx={{ width: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
-            <Typography variant="h4" gutterBottom sx={{ color: '#d79a49', margin: '30px', fontWeight: '600' }} >
-                Lanches
+        <Box sx={{ width: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', backgroundColor: '#3c3f3d', padding: '30px', borderRadius: '10px', margin: '20px' }} >
+            <Typography variant="h4" gutterBottom sx={{ color: '#dd9937', margin: '30px', width: '100%', fontFamily: 'alvaro' }} >
+                Portfólio
+            </Typography>
+            <Typography variant="body1" gutterBottom sx={{ textAlign: 'justify', color: 'white' }} >
+                Oferecemos hambúrgueres smash de alta qualidade, procurando sempre os melhores ingredientes e inovando constantemente nosso cardápio para trazer uma comida saborosa e de qualidade. Nosso diferencial está na combinação de sabores únicos e na técnica impecável de preparo, resultando em hambúrgueres suculentos e irresistíveis. Nosso público-alvo abrange pessoas de todas as idades que apreciam hambúrgueres, desde os jovens em busca de opções modernas até os adultos que desejam uma refeição reconfortante. Satisfaça seu paladar com nosso portfólio de hambúrgueres deliciosos.
+            </Typography>
+            <Typography variant="h4" gutterBottom sx={{ color: '#dd9937', margin: '30px', width: '100%', fontFamily: 'alvaro' }} >
+                Cardapio
             </Typography>
             <ThemeProvider theme={theme}>
-                <TabContext value={value}>
-                    <Box>
-                        <TabList
-                            onChange={handleChange}
-                            aria-label='Tabs example'
-                            TabIndicatorProps={{
-                                style: {
-                                    backgroundColor: "grey",
-                                }
-                            }}
-                            indicatorColor='primary'
-                            centered
-                        >
-                            <Grid container spacing={2}>
-                                {
-                                    allImages.map((img: any) => (
-                                        <Grid onClick={() => setLanche(img)} item xs={1} sm={5} md={2} key={img.name} sx={{ color: '#d79a49', margin: '8 px', fontSize: '12px', textAlign: 'center' }}>
-                                            <Tab
-                                                label={img.name}
-                                                {...a11yProps(0)}
-                                                value={img.name}
-                                                component={() => (
-                                                    <Button onClick={() => setValue(img.name)}>
-                                                        <Avatar
-                                                            src={img.img}
-                                                            sx={{
-                                                                width: '60px',
-                                                                height: '60px',
-                                                                backgroundSize: 'cover'
-                                                            }}
-                                                        />
-                                                    </Button>
-                                                )}
-                                                sx={{
-                                                    fontSize: '16px',
-                                                    fontWeight: 'bold',
-                                                    color: 'black',
-                                                    minWidth: '200px',
-                                                }}
-                                            />
-                                            <Typography gutterBottom sx={{ color: 'white', margin: '8 px', fontSize: '14px', textAlign: 'center' }} >
-                                                {img.name}
-                                            </Typography>
-                                        </Grid>
-                                    ))}
-                            </Grid>
-                        </TabList>
-                    </Box>
+
+                <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+
+                    <Grid container spacing={2}>
+                        {
+                            allImages.map((img: any) => (
+                                <Grid onClick={() => setLanche(img)} item xs={1} sm={5} md={2} key={img.name} sx={{ color: '#dd9937', margin: '8 px', fontSize: '12px', textAlign: 'center' }}>
+
+                                    <Button onClick={() => setValue(img.name)}>
+                                        <Avatar
+                                            src={img.img}
+                                            sx={{
+                                                width: '80px',
+                                                height: '80px',
+                                                backgroundSize: 'cover'
+                                            }}
+                                        />
+                                    </Button>
+
+
+
+                                    <Typography gutterBottom sx={{ color: 'white', margin: '8 px', fontSize: '26px', textAlign: 'center', textDecoration: 'underline', fontFamily: 'alvaro' }} >
+                                        {img.name}
+                                    </Typography>
+                                </Grid>
+                            ))}
+                    </Grid>
+
+
                     <Box sx={{
                         display: 'flex',
-                        flexDirection: 'column',
+                        flexDirection: 'row',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        height: '450px',
-                        width: '800px',
-                        borderRadius: '15px',
-                        margin: '20px'
-
+                        width: '100%',
+                        borderRadius: '10px',
+                        marginTop: '40px',
+                        backgroundColor: '#333634',
+                        padding: '10px',
+                        paddingTop: '25px',
+                        paddingBottom: '25px',
                     }}>
+                        <Box>
 
-                        <Avatar
-                            src={lanche?.img}
-                            sx={{
-                                width: '280px',
-                                height: '280px',
-                                border: '3px #d79a49 solid',
-                            }}
-                        />
+                            <Avatar
+                                src={lanche?.img}
+                                sx={{
+                                    width: '320px',
+                                    height: '320px',
+                                }}
+                            />
+                        </Box>
                         <Box sx={{
-                            height: '80px', marginBottom: '10px', textAlign: 'center'
+                            display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '50%',
+                            marginBottom: '10px', textAlign: 'left', marginLeft: '20px', padding: '10px', borderRadius: '10px'
                         }}>
-                            <Typography variant="h5" gutterBottom sx={{ color: 'white', fontWeight: '600', margin: '15 px' }} >
+                            <Typography variant="h2" sx={{ color: '#dd9937', width: '100%', fontFamily: 'alvaro' }} >
                                 {lanche?.name}
                             </Typography>
                             <Typography variant="body1" gutterBottom sx={{
-                                textAlign: 'justify', color: 'black', fontSize: '14px',
-                                fontWeight: '500', backgroundColor: '#DD9937', padding: '7px',
-                                borderRadius: '8px',
+                                textAlign: 'justify', color: '#333634', fontSize: '14px', padding: '7px',
+                                borderRadius: '8px', backgroundColor: '#DD9937', fontWeight: '400'
                             }} >
                                 {lanche?.desc}
                             </Typography>
                         </Box>
+
                     </Box>
 
-                </TabContext >
+
+                </Box>
+
             </ThemeProvider>
         </Box >
     );

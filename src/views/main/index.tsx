@@ -7,9 +7,9 @@ import FooterComponent from '../../components/footer';
 function Main() {
     return (
         <div className="app-container">
-            <header className="header">
+            {/*  <header className="header">
                 <HeaderComponent />
-            </header>
+            </header> */}
             <main className="main">
                 <MainArticleComponent />
             </main>
