@@ -7,17 +7,33 @@ export default function OurStory() {
     return (
         <Box sx={{
             width: {
-                xs: '90vw',
-                sm: '90vw',
+                xs: '100%',
+                sm: '100%',
                 md: '90vw',
                 lg: '90vw',
                 xl: '50vw'
             }, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', backgroundColor: '#3c3f3d', padding: '30px', borderRadius: '10px'
         }} >
-            <Typography variant="h4" gutterBottom sx={{ color: '#dd9937', margin: '30px', width: '100%', fontFamily: 'alvaro' }} >
+            <Typography variant="h4" gutterBottom sx={{
+                color: '#dd9937', margin: '30px', width: '100%', fontFamily: 'alvaro', fontSize: {
+                    xs: '28px',
+                    sm: '28px',
+                    md: '36px',
+                    lg: '36px',
+                    xl: '36px'
+                }
+            }} >
                 Nossa História
             </Typography>
-            <Typography variant="body1" gutterBottom sx={{ textAlign: 'justify', color: 'white' }} >
+            <Typography gutterBottom sx={{
+                textAlign: 'justify', color: 'white', fontSize: {
+                    xs: '14px',
+                    sm: '14px',
+                    md: '18px',
+                    lg: '18px',
+                    xl: '18px'
+                }
+            }} >
                 A Tenerifes é muito mais do que apenas um estabelecimento de hambúrgueres. Ela nasceu de uma ideia que já existia antes mesmo de se tornar realidade. A vontade de oferecer um hambúrguer de qualidade estava presente, mesmo antes da criação do nosso CNPJ.
 
                 No início de 2020, demos os primeiros passos e começamos a operar do zero, contando apenas com a determinação, o apoio dos amigos e muita boa vontade. Cometer erros fazia parte do caminho e, de fato, foi fundamental para o nosso crescimento.

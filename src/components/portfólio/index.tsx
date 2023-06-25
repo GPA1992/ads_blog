@@ -37,61 +37,63 @@ export default function Portfolio() {
     return (
         <Box sx={{
             width: {
-                xs: '70vw',
-                sm: '70vw',
-                md: '70vw',
-                lg: '60vw',
-                xl: '50vw'
-            }, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', backgroundColor: '#3c3f3d', padding: '30px', borderRadius: '10px', margin: '20px'
+                xs: '100%',
+                sm: '100%',
+                md: '50%',
+                lg: '50%',
+                xl: '50%'
+            }, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', backgroundColor: '#3c3f3d', padding: '30px', borderRadius: '10px',
         }} >
-            <Typography variant="h4" gutterBottom sx={{ color: '#dd9937', margin: '30px', width: '100%', fontFamily: 'alvaro' }} >
+            <Typography variant="h4" gutterBottom sx={{
+                color: '#dd9937', margin: '30px', width: '100%', fontFamily: 'alvaro', fontSize: {
+                    xs: '28px',
+                    sm: '28px',
+                    md: '36px',
+                    lg: '36px',
+                    xl: '36px'
+                }
+            }} >
                 Portfólio
             </Typography>
-            <Typography variant="body1" gutterBottom sx={{ textAlign: 'justify', color: 'white' }} >
+            <Typography variant="body1" gutterBottom sx={{
+                textAlign: 'justify', color: 'white', fontSize: {
+                    xs: '14px',
+                    sm: '14px',
+                    md: '18px',
+                    lg: '18px',
+                    xl: '18px'
+                }
+            }} >
                 Oferecemos hambúrgueres smash de alta qualidade, procurando sempre os melhores ingredientes e inovando constantemente nosso cardápio para trazer uma comida saborosa e de qualidade. Nosso diferencial está na combinação de sabores únicos e na técnica impecável de preparo, resultando em hambúrgueres suculentos e irresistíveis. Nosso público-alvo abrange pessoas de todas as idades que apreciam hambúrgueres, desde os jovens em busca de opções modernas até os adultos que desejam uma refeição reconfortante. Satisfaça seu paladar com nosso portfólio de hambúrgueres deliciosos.
             </Typography>
-            <Typography variant="h4" gutterBottom sx={{ color: '#dd9937', margin: '30px', width: '100%', fontFamily: 'alvaro' }} >
+            <Typography variant="h4" gutterBottom sx={{
+                color: '#dd9937', margin: '30px', width: '100%', fontFamily: 'alvaro', fontSize: {
+                    xs: '28px',
+                    sm: '28px',
+                    md: '36px',
+                    lg: '36px',
+                    xl: '36px'
+                }
+            }} >
                 Cardapio
             </Typography>
             <ThemeProvider theme={theme}>
 
-                <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-
-                    <Grid container spacing={2}>
-                        {
-                            allImages.map((img: any) => (
-                                <Grid onClick={() => setLanche(img)} item xs={1} sm={5} md={2} key={img.name} sx={{ color: '#dd9937', margin: '8 px', fontSize: '12px', textAlign: 'center' }}>
-
-                                    <Button onClick={() => setValue(img.name)}>
-                                        <Avatar
-                                            src={img.img}
-                                            sx={{
-                                                width: '80px',
-                                                height: '80px',
-                                                backgroundSize: 'cover'
-                                            }}
-                                        />
-                                    </Button>
-
-
-
-                                    <Typography gutterBottom sx={{ color: 'white', margin: '8 px', fontSize: '26px', textAlign: 'center', textDecoration: 'underline', fontFamily: 'alvaro' }} >
-                                        {img.name}
-                                    </Typography>
-                                </Grid>
-                            ))}
-                    </Grid>
-
-
+                <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
                     <Box sx={{
                         display: 'flex',
-                        flexDirection: 'row',
+                        flexDirection: {
+                            xs: 'column',
+                            sm: 'column',
+                            md: 'column',
+                            lg: 'row',
+                            xl: 'row'
+                        },
                         justifyContent: 'center',
                         alignItems: 'center',
                         width: '100%',
                         borderRadius: '10px',
-                        marginTop: '40px',
-                        backgroundColor: '#333634',
+                        marginBottom: '20px',
                         padding: '10px',
                         paddingTop: '25px',
                         paddingBottom: '25px',
@@ -101,27 +103,130 @@ export default function Portfolio() {
                             <Avatar
                                 src={lanche?.img}
                                 sx={{
-                                    width: '320px',
-                                    height: '320px',
+                                    width: {
+                                        xs: '200px',
+                                        sm: '200px',
+                                        md: '320px',
+                                        lg: '320px',
+                                        xl: '320px'
+                                    },
+                                    height: {
+                                        xs: '200px',
+                                        sm: '200px',
+                                        md: '320px',
+                                        lg: '320px',
+                                        xl: '320px'
+                                    },
                                 }}
                             />
                         </Box>
                         <Box sx={{
                             display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '50%',
-                            marginBottom: '10px', textAlign: 'left', marginLeft: '20px', padding: '10px', borderRadius: '10px'
+                            marginBottom: '10px',
+                            textAlign: {
+                                xs: 'center',
+                                sm: 'center',
+                                md: 'center',
+                                lg: 'left',
+                                xl: 'left'
+                            },
+                            marginLeft: {
+                                xs: '',
+                                sm: '',
+                                md: '',
+                                lg: '20px',
+                                xl: '20px'
+                            },
+                            padding: '10px',
+                            borderRadius: '10px'
                         }}>
-                            <Typography variant="h2" sx={{ color: '#dd9937', width: '100%', fontFamily: 'alvaro' }} >
+                            <Typography variant="h2" sx={{
+                                color: '#dd9937', width: '100%', fontFamily: 'alvaro', fontSize: {
+                                    xs: '28px',
+                                    sm: '28px',
+                                    md: '36px',
+                                    lg: '36px',
+                                    xl: '36px'
+                                }
+                            }} >
                                 {lanche?.name}
                             </Typography>
                             <Typography variant="body1" gutterBottom sx={{
-                                textAlign: 'justify', color: '#333634', fontSize: '14px', padding: '7px',
-                                borderRadius: '8px', backgroundColor: '#DD9937', fontWeight: '400'
+                                textAlign: 'justify', color: '#333634', fontSize: {
+                                    xs: '14px',
+                                    sm: '14px',
+                                    md: '18px',
+                                    lg: '18px',
+                                    xl: '18px'
+                                },
+                                padding: '7px',
+                                borderRadius: '8px',
+                                backgroundColor: '#DD9937',
+                                fontWeight: '400',
+                                /*  width: '100%', */
                             }} >
                                 {lanche?.desc}
                             </Typography>
                         </Box>
 
                     </Box>
+                    <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', width: '100%', height: '100%' }}>
+                        {
+                            allImages.map((img: any) => (
+                                <Box onClick={() => setLanche(img)}
+                                    key={img.name}
+                                    sx={{
+                                        display: 'flex', flexDirection: 'column', width: {
+                                            xs: '30%',
+                                            sm: '30%',
+                                            md: '10%',
+                                            lg: '25%',
+                                            xl: '25%'
+                                        },
+                                    }}
+                                >
+
+                                    <Button onClick={() => setValue(img.name)}>
+                                        <Avatar
+                                            src={img.img}
+                                            sx={{
+                                                width: {
+                                                    xs: '50px',
+                                                    sm: '50px',
+                                                    md: '50px',
+                                                    lg: '80px',
+                                                    xl: '80px'
+                                                },
+                                                height: {
+                                                    xs: '50px',
+                                                    sm: '50px',
+                                                    md: '50px',
+                                                    lg: '80px',
+                                                    xl: '80px'
+                                                },
+                                                backgroundSize: 'cover'
+                                            }}
+                                        />
+                                    </Button>
+
+
+
+                                    <Typography gutterBottom sx={{
+                                        color: 'white', margin: '8 px', fontSize: {
+                                            xs: '18px',
+                                            sm: '18px',
+                                            md: '22px',
+                                            lg: '26px',
+                                            xl: '26px'
+                                        }, textAlign: 'center', textDecoration: 'underline', fontFamily: 'alvaro'
+                                    }} >
+                                        {img.name}
+                                    </Typography>
+                                </Box>
+                            ))}
+
+                    </Box>
+
 
 
                 </Box>
