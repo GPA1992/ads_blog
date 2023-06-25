@@ -152,18 +152,12 @@ export default function Portfolio() {
                                 {lanche?.name}
                             </Typography>
                             <Typography variant="body1" gutterBottom sx={{
-                                textAlign: 'justify', color: '#333634', fontSize: {
-                                    xs: '14px',
-                                    sm: '14px',
-                                    md: '18px',
-                                    lg: '18px',
-                                    xl: '18px'
-                                },
+                                textAlign: 'justify', color: 'black', fontSize: '14px',
                                 padding: '7px',
                                 borderRadius: '8px',
                                 backgroundColor: '#DD9937',
                                 fontWeight: '400',
-                                /*  width: '100%', */
+                                fontFamily: 'roboto-lig'
                             }} >
                                 {lanche?.desc}
                             </Typography>
@@ -212,13 +206,7 @@ export default function Portfolio() {
 
 
                                     <Typography gutterBottom sx={{
-                                        color: 'white', margin: '8 px', fontSize: {
-                                            xs: '18px',
-                                            sm: '18px',
-                                            md: '22px',
-                                            lg: '26px',
-                                            xl: '26px'
-                                        }, textAlign: 'center', textDecoration: 'underline', fontFamily: 'alvaro'
+                                        color: 'white', margin: '8 px', fontSize: '16px', textAlign: 'center', fontFamily: 'roboto-lig'
                                     }} >
                                         {img.name}
                                     </Typography>

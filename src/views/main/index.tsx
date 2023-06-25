@@ -7,7 +7,10 @@ import { Box } from '@mui/material';
 
 function Main() {
     return (
-        <Box>
+        <Box sx={{
+            height: '100%',
+            backgroundColor: 'red'
+        }}>
             {/*  <header className="header">
                 <HeaderComponent />
             </header> */}
@@ -15,13 +18,13 @@ function Main() {
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'center',
+                justifyContent: 'flex-start',
                 alignItems: 'center',
-                minHeight: '100vh',
                 backgroundColor: '#333634',
                 width: '90wh',
+                height: '100%',
+                minHeight: '1000px'
             }}>
-
                 <MainArticleComponent />
             </Box>
 

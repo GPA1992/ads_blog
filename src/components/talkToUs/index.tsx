@@ -11,9 +11,9 @@ export default function TalkToUs() {
             width: {
                 xs: '100%',
                 sm: '100%',
-                md: '90vw',
-                lg: '90vw',
-                xl: '50vw'
+                md: '50%',
+                lg: '50%',
+                xl: '50%'
             }, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', backgroundColor: '#3c3f3d', padding: '30px', borderRadius: '10px', margin: '20px'
         }} >
             <Typography variant="h4" gutterBottom sx={{ color: '#dd9937', margin: '30px', width: '100%', fontFamily: 'alvaro' }} >
