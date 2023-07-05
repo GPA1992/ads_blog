@@ -1,6 +1,6 @@
-# React TS Boilerplate
+# blog ads
 
-O projeto "React TS Boilerplate" é uma aplicação em React que fornece um ambiente pré-configurado para o desenvolvimento de aplicações, pronto para serem utilizadas com TypeScript. Ele inclui configurações prontas para o Redux, Context API e testes, permitindo que o usuário comece a codar imediatamente sem precisar se preocupar com a configuração inicial.
+.
 
 ## Recursos incluidos
 
